@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 45px;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+  font-size: 30px;
+  list-style: none;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+
+  z-index: 1000;
+}
+body {
+  color: white;
+
+  background-size: cover;
+  background-color: black;
+  padding-top: 54.4px;
+}
+nav li:first-child {
+  margin-right: auto;
+  margin-left: 15px;
+}
+span {
+  font-weight: bold;
+  color: red;
+}
+#navigation:hover {
+  text-shadow: 0 0 10px red; /* comme allumer une lumière */
+  color: red;
+  transition: color 0.5s ease-in;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  padding: 0 20px;
+}
+h1 {
+  text-align: center;
+  font-size: 4.5em;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  text-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+span {
+  font-weight: bold;
+  color: red;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  color: #e0e0e0; 
+  max-width: 600px;
+  text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+  animation: fadeInUp 1.5s ease;
+  
+}
+
+.btn-start {
+  text-decoration: none;
+  background-color: #e74c3c;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+
+.btn-start:hover {
+  background-color: transparent;
+  border-color: #e74c3c;
+  transform: scale(1.05);
+  box-shadow: 0 8px 40px rgba(255, 0, 0, 0.8);
+}
+
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+  .sub-title {
+    font-size: 1.1rem;
+  }
+}
+.background-clip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  object-fit: cover;
+  filter: brightness(40%) blur(2px); /*ameliore qualite de l'image affecte par la Vit*/
+}
